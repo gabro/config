@@ -1,8 +1,6 @@
 package config
 
-sealed trait RepoError extends Throwable
+sealed trait RepoError extends Exception
 object RepoError {
   case object NotFound extends RepoError
-
-  val notFound: Throwable = NotFound
 }
